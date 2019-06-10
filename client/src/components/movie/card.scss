@@ -1,0 +1,31 @@
+.price-box, .sound-box {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1rem;
+
+    i {
+        font-size: 1.5rem;
+    }
+    
+    .cash, .sound {
+        margin-right: 10px;
+    }
+}
+
+.ant-card-actions li {
+    margin: 0 !important;
+    padding: 12px 0;
+    &:first-child {
+        background-color: #2196f3ba;
+    }
+    &:last-child {
+        background-color: #f16724;
+    }
+    span {
+        color: white;
+        &:hover {
+            color: white !important;
+        }
+    }
+}
