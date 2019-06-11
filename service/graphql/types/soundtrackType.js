@@ -7,4 +7,4 @@ module.exports = `
     type Query {
         soundtracks: [SoundTrack]
     }
-`
+`;

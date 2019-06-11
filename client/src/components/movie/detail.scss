@@ -1,0 +1,43 @@
+.movie-detail-wrapper, .movie-detail {
+    position: relative;
+    padding-top: 30px;
+}
+
+.poster-wrapper {
+    position: absolute;
+    left: -100px;    
+    top: 20px;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,.1);
+
+    img {
+        border-radius: 5px;
+        min-width: 220px;
+    }
+}
+
+.movie-detail {
+    width: 60%;
+    min-height: 458px;
+    background-color: #fff;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,.1);
+    padding: 40px 40px 40px 200px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .movie-detail {
+        width: 80%;
+        padding: 100px 20px;
+    }
+
+    .poster-wrapper {
+        position: absolute;
+        left: 30px;
+        top: -30px;
+        img {
+            min-width: 90px;
+            width: 90px;
+            height: 120px;
+        }
+    }
+  }

@@ -1,4 +1,4 @@
-.price-box, .sound-box {
+.price-box, .sound-box, .date-box {
     display: flex;
     align-items: center;
     margin-top: 20px;
@@ -8,7 +8,7 @@
         font-size: 1.5rem;
     }
     
-    .cash, .sound {
+    .cash, .sound, .date {
         margin-right: 10px;
     }
 }
@@ -28,4 +28,36 @@
             color: white !important;
         }
     }
+}
+
+/* appear - on page load */
+.fade-appear {
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 300ms linear;
+}
+
+/* enter */
+.fade-enter {
+    display: none;
+    z-index: 1;
+}
+.fade-enter.fade-enter-active {
+    display: initial;
+    transition: all 300ms linear;
+}
+
+/* exit */
+.fade-exit {
+    display: initial;
+}
+.fade-exit.fade-exit-active {
+    display: none;
+    transition: all 300ms linear;
+}
+.fade-exit-done {
+    display: none;
 }

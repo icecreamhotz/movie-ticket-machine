@@ -5,10 +5,12 @@ module.exports = `
         logo: String!,
         description: String!,
         price: Int!,
+        release_date: String!,
         soundtrack: SoundTrack!
     }
 
     type Query {
         movies: [Movie]
+        movie(id: ID!): Movie
     }
-`
+`;

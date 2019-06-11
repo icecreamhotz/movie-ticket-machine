@@ -6,6 +6,7 @@ const movieSchema = new Schema({
     logo: String,
     description: String,
     price: Number,
+    release_date: String,
     soundtrack: {
         type: Schema.Types.ObjectId,
         ref: "soundtracks"
