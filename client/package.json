@@ -10,18 +10,18 @@
     "react": "^16.8.6",
     "react-content-loader": "^4.2.1",
     "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-transition-group": "^4.1.1",
-    "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0",
-    "socket.io-client": "^2.2.0"
+    "redux": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,6 +39,23 @@
     ]
   },
   "devDependencies": {
-    "redux-devtools-extension": "^2.13.8"
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
+    "redux-devtools-extension": "^2.13.8",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "identity-obj-proxy": "^3.0.0"
+  },
+  "jest": {
+    "verbose": true,
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(our-react-components-.*?\\.js$))"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js",
+      "^.+\\.(css|less|scss)$": "babel-jest"
+    }
   }
 }

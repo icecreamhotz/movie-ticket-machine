@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import HeaderComponent from "./components/layout/HeaderComponent";
 import MovieComponent from "./components/movie/MovieComponent";
 import MovieDetailComponent from "./components/movie/MovieDetailComponent";
+import ReceiptComponent from "./components/movie/ReceiptComponent";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <div>
         <HeaderComponent />
         <Route path="/" exact component={MovieComponent} />
-        <Route path="/movie/:id" exact component={MovieDetailComponent} />
+        <Route path="/movie/:id" component={MovieDetailComponent} />
+        <Route path="/receipt" component={ReceiptComponent} />
       </div>
     </Router>
   );

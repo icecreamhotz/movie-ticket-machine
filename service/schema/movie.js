@@ -1,16 +1,16 @@
-const mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+const mongoose = require("mongoose"),
+  Schema = mongoose.Schema;
 
 const movieSchema = new Schema({
-    name: String,
-    logo: String,
-    description: String,
-    price: Number,
-    release_date: String,
-    soundtrack: {
-        type: Schema.Types.ObjectId,
-        ref: "soundtracks"
-    }
-})
+  name: { type: String, required: true },
+  logo: { type: String, required: true },
+  description: { type: String, required: true },
+  price: { type: Number, required: true },
+  release_date: { type: String, required: true },
+  soundtrack: {
+    type: Schema.Types.ObjectId,
+    ref: "soundtracks"
+  }
+});
 
-module.exports = mongoose.model("movies", movieSchema)
+module.exports = mongoose.model("movies", movieSchema);

@@ -85,7 +85,7 @@ class MovieComponent extends Component {
   };
 
   handleChangeFilterChoice = value => {
-    this.setState({ filterChoice: value }, () =>
+    this.setState({ filterChoice: value, loading: true }, () =>
       // check filter without movie name
       this.filterMovieDataByChoice()
     );
@@ -127,7 +127,8 @@ class MovieComponent extends Component {
       movies: filterMovie,
       minValue: 0,
       maxValue: 9,
-      current: 1
+      current: 1,
+      loading: false
     });
   };
 
@@ -139,7 +140,8 @@ class MovieComponent extends Component {
       movies: filterMovie,
       minValue: 0,
       maxValue: 9,
-      current: 1
+      current: 1,
+      loading: false
     });
   };
 
@@ -221,8 +223,6 @@ class MovieComponent extends Component {
       movieSearch,
       current
     } = this.state;
-    if (loading) return "loading";
-    console.log(this.state.backupMovies);
     return (
       <div>
         <Content style={{ padding: "0 50px" }}>
@@ -258,6 +258,7 @@ class MovieComponent extends Component {
               minValue={minValue}
               maxValue={maxValue}
               movies={movies}
+              loading={loading}
             />
           </CSSTransition>
           <Row>
