@@ -6,7 +6,7 @@ const transporter = nodemailer.createTransport({
   service: "hotmail",
   auth: {
     user: "best_dota@hotmail.com", // your email
-    pass: "fdaauentqoifrqnq" // your email password
+    pass: "this is a secret" // your email password
   }
 });
 
